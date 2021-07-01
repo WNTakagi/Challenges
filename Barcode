@@ -1,0 +1,73 @@
+ print('Bem vindo funcionário: ')
+nome = input(str('Digite seu Nome: '))
+print('Obrigado por acessar o sistema', nome)
+decisao = input(str('Gostaria de fazer uma varredura antes de continuar? [S/N] ')).upper()
+if decisao == 'N':
+  barcode = input('Digite o código para consulta: ')
+  if decisao == 'S':
+    print('Iniciando Varredura')
+print('1 -> ')
+print('2 ->')
+print('3')
+print('Varredura Concluida')
+print(' ')
+print('Lista de códigos para consulta:', pacotes)
+print(' ')
+print('Os códigos da lista inválidos são: ', pacotes[1], pacotes[7], pacotes[9], pacotes[12], pacotes[13], pacotes[4], pacotes[5], pacotes[8])
+print(' ')
+print('Os códigos válidos para consulta são: ', pacotes[2], pacotes[3], pacotes[6], pacotes[10], pacotes[11], pacotes[14])
+print(' ')
+print('O único Pacote com destino a região Sul de código: 888000555845333 não contém brinquedos ')
+print(' ')
+print('Pacotes com destino a região Nordeste: 111333555123555 e 222333555124000')
+print('Pacotes com destino a região Sudeste:555888555123000 e 111888555123555')
+print('Pacotes com destino a região Norte: 555555555123888')
+print(' ')
+print('Pacotes do vendedor 123: 55588855512300, 555555555123888, 111333555123555, 111888555123555')
+print('Pacotes do vendedor 124: 222333555124000')
+barcode = input('Digite seu código para consulta: ')
+if len(barcode) <= 14:
+    print('Código Inválido')
+elif barcode in pacotes [1]:
+    print('Código invalido, vendedor está com seu CNPJ inativo em nossa base de dados')
+elif barcode in pacotes [7]:
+    print('Código invalido, vendedor está com seu CNPJ inativo em nossa base de dados')
+elif barcode in pacotes [9]:
+    print('Código invalido, vendedor está com seu CNPJ inativo em nossa base de dados')
+elif barcode in pacotes [12]:
+    print('Código invalido, vendedor está com seu CNPJ inativo em nossa base de dados')
+elif barcode in pacotes [13]:
+    print('Produto não poderá ser enviado por ser tratar de uma Joia para a região Centro-Oeste')
+elif barcode in pacotes [4]:
+    print('Produto não localizado em nossa base de dados, não poderá ser enviado')
+elif barcode in pacotes [2]:
+    print('Este Pacote não possui localização de saída em nossa base de dados e irá para a região Nordeste')
+    print('Com o código da Loggi: 555 ')
+    print('O código do vendedor do produto é: 124' )
+    print('Trata-se de uma Joia ')
+elif barcode in pacotes [3]:
+    print('Este Pacote sairá da região Sul para região Centro-Oeste ')
+    print('Com o código da Loggi: 555 ')
+    print('O código do vendedor do produto é: 874' )
+    print('Trata-se de uma Bebida ')
+elif barcode in pacotes [6]:
+    print('Este Pacote sairá de uma parte da região Norte para outra parte da região Norte ')
+    print('Com o código da Loggi: 555 ')
+    print('O código do vendedor do produto é: 123' )
+    print('Trata-se de um Brinquedo')
+elif barcode in pacotes [10]:
+    print('Este Pacote sairá da região Norte para região Sudeste ')
+    print('Com o código da Loggi: 555 ')
+    print('O código do vendedor do produto é: 123' )
+    print('Trata-se de uma Joia')
+elif barcode in pacotes [11]:
+    print('Este Pacote sairá da região Centro-Oeste para região Sudeste ')
+    print('Com o código da Loggi: 555 ')
+    print('O código do vendedor do produto é: 123' )
+    print('Trata-se de uma Bebida')
+elif barcode in pacotes [14]:
+    print('Este Pacote sairá da região Centro-Oeste para região Nordeste ')
+    print('Com o código da Loggi: 555 ')
+    print('O código do vendedor do produto é: 123' )
+    print('Trata-se de uma Bebida')
+
