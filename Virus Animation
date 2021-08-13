@@ -1,3 +1,4 @@
+#Virus 1
 from turtle import *
 speed(30)
 color('cyan')
@@ -7,3 +8,16 @@ while b > 0:
     left(b)
     forward(b * 3)
     b = b - 1
+
+#Virus 2
+from turtle import *
+speed(30)
+color('green')
+bgcolor('black')
+hideturtle()
+b = 0
+while b < 200:
+    right(b)
+    forward(b * 3)
+    b = b + 1
+    
